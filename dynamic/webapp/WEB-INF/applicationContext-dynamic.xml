@@ -7,7 +7,13 @@
 	<bean id="dynamicDataSource" class="com.jaspersoft.jasperserver.api.engine.jasperreports.util.CustomDataSourceDefinition">
 		<property name="factory" ref="customDataSourceServiceFactory"/>
 		<property name="name" value="dynamicDataSource"/>
-		<property name="serviceClassName" value="example.cds.CustomSimplifiedDataSourceService"/>		
+		<property name="serviceClassName" value="pl.aszywala.dynamic.DynamicDataSourceService"/>	
+		<property name="propertyDefinitions">
+			<list/>				
+		</property>
+		<property name="queryExecuterMap">
+			<map/>
+		</property>	
 	</bean>
 
     <bean class="com.jaspersoft.jasperserver.api.common.util.spring.GenericBeanUpdater">
